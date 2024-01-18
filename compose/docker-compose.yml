@@ -6,9 +6,14 @@ services:
     ports:
       - '27017:27017'
     restart: always
+    volumes: 
+      - mongodb:/data/db
 
   huggingchat:
     build: 
       context: ..
     ports:
       - '3000:3000'
+
+volumes:
+  mongodb:
