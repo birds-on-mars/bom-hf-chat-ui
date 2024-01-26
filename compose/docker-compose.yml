@@ -10,8 +10,10 @@ services:
       - mongodb:/data/db
 
   huggingchat:
+    container_name: huggingchat
     build: 
       context: ..
+    restart: unless-stopped
     ports:
       - '3000:3000'
 
