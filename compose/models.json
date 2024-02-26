@@ -205,6 +205,7 @@
     {
         "name": "TristanBehrens/Phoenix-GGUF",
         "displayName": "🏠 Phoenix 7B v2.5",
+        "chatPromptTemplate": "<|system|>\n{{preprompt}}</s>\n{{#each messages}}{{#ifUser}}<|user|>\n{{content}}</s>\n<|assistant|>\n{{/ifUser}}{{#ifAssistant}}{{content}}</s>\n{{/ifAssistant}}{{/each}}",
         "description": "Locally served Ollama model",
         "parameters": {
             "temperature": 0.2,

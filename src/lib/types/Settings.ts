@@ -25,7 +25,7 @@ export interface Settings extends Timestamps {
 
 // TODO: move this to a constant file along with other constants
 export const DEFAULT_SETTINGS = {
-	shareConversationsWithModelAuthors: true,
+	shareConversationsWithModelAuthors: false,
 	activeModel: defaultModel.id,
 	hideEmojiOnSidebar: false,
 	customPrompts: {},
