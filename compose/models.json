@@ -214,8 +214,29 @@
         "endpoints": [
             {
                 "type": "ollama",
-                "url": "http://localhost:11434",
+                "url": "http://192.168.41.240:11434",
                 "ollamaName": "phoenix"
+            }
+        ]
+    },
+    {
+        "name": "TheBloke/Mixtral-8x7B-v0.1-GGUF",
+        "displayName": "🏠 Mixtral 8x7B v0.1",
+        "description": "Locally served Ollama model",
+        "chatPromptTemplate": "<s> {{#each messages}}{{#ifUser}}[INST]{{#if @first}}{{#if @root.preprompt}}{{@root.preprompt}}\n{{/if}}{{/if}} {{content}} [/INST]{{/ifUser}}{{#ifAssistant}} {{content}}</s> {{/ifAssistant}}{{/each}}",
+        "parameters": {
+            "temperature": 0.2,
+            "truncate": 24576,
+            "max_new_tokens": 8192,
+            "stop": [
+                "</s>"
+            ]
+        },
+        "endpoints": [
+            {
+                "type": "ollama",
+                "url": "http://192.168.41.240:11434",
+                "ollamaName": "mixtral:8x7b-instruct-v0.1-q4_K_M"
             }
         ]
     }
